@@ -23,10 +23,10 @@ def read_file(file_name):
 def hash_password(password):
     import hashlib
     hashed = hashlib.md5(password.encode()).hexdigest()  # MD5 is insecure
-    print(f"MD5 hash of password: {hashed}")
+        print(f"MD5 hash of password: {hashed}")
 
 if __name__ == "__main__":
     connect_to_db()
     unsafe_query("'; DROP TABLE users; --")
     read_file("../../etc/passwd")
-    hash_password("my_secure_password")
+        hash_password("my_secure_password")
